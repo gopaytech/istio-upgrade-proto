@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package model;
+option go_package = "../model";
+
+message Upgrade {
+    string istio_version = 1;
+    string cluster_name = 2;
+}
+
