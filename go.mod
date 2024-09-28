@@ -1,4 +1,4 @@
-module github.com/gopaytech/itio-upgrade-proto
+module github.com/gopaytech/istio-upgrade-proto
 
 go 1.22
 
