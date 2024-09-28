@@ -2,9 +2,9 @@
 // versions:
 // 	protoc-gen-go v1.34.2
 // 	protoc        v5.28.2
-// source: proto/upgrade.proto
+// source: upgrade.proto
 
-package __
+package istio_upgrade_proto
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -32,7 +32,7 @@ type Upgrade struct {
 func (x *Upgrade) Reset() {
 	*x = Upgrade{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_proto_upgrade_proto_msgTypes[0]
+		mi := &file_upgrade_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -45,7 +45,7 @@ func (x *Upgrade) String() string {
 func (*Upgrade) ProtoMessage() {}
 
 func (x *Upgrade) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_upgrade_proto_msgTypes[0]
+	mi := &file_upgrade_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -58,7 +58,7 @@ func (x *Upgrade) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Upgrade.ProtoReflect.Descriptor instead.
 func (*Upgrade) Descriptor() ([]byte, []int) {
-	return file_proto_upgrade_proto_rawDescGZIP(), []int{0}
+	return file_upgrade_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *Upgrade) GetIstioVersion() string {
@@ -75,36 +75,38 @@ func (x *Upgrade) GetClusterName() string {
 	return ""
 }
 
-var File_proto_upgrade_proto protoreflect.FileDescriptor
+var File_upgrade_proto protoreflect.FileDescriptor
 
-var file_proto_upgrade_proto_rawDesc = []byte{
-	0x0a, 0x13, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x75, 0x70, 0x67, 0x72, 0x61, 0x64, 0x65, 0x2e,
-	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x05, 0x6d, 0x6f, 0x64, 0x65, 0x6c, 0x22, 0x51, 0x0a, 0x07,
-	0x55, 0x70, 0x67, 0x72, 0x61, 0x64, 0x65, 0x12, 0x23, 0x0a, 0x0d, 0x69, 0x73, 0x74, 0x69, 0x6f,
-	0x5f, 0x76, 0x65, 0x72, 0x73, 0x69, 0x6f, 0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0c,
-	0x69, 0x73, 0x74, 0x69, 0x6f, 0x56, 0x65, 0x72, 0x73, 0x69, 0x6f, 0x6e, 0x12, 0x21, 0x0a, 0x0c,
-	0x63, 0x6c, 0x75, 0x73, 0x74, 0x65, 0x72, 0x5f, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x02, 0x20, 0x01,
-	0x28, 0x09, 0x52, 0x0b, 0x63, 0x6c, 0x75, 0x73, 0x74, 0x65, 0x72, 0x4e, 0x61, 0x6d, 0x65, 0x42,
-	0x03, 0x5a, 0x01, 0x2e, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+var file_upgrade_proto_rawDesc = []byte{
+	0x0a, 0x0d, 0x75, 0x70, 0x67, 0x72, 0x61, 0x64, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12,
+	0x05, 0x6d, 0x6f, 0x64, 0x65, 0x6c, 0x22, 0x51, 0x0a, 0x07, 0x55, 0x70, 0x67, 0x72, 0x61, 0x64,
+	0x65, 0x12, 0x23, 0x0a, 0x0d, 0x69, 0x73, 0x74, 0x69, 0x6f, 0x5f, 0x76, 0x65, 0x72, 0x73, 0x69,
+	0x6f, 0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0c, 0x69, 0x73, 0x74, 0x69, 0x6f, 0x56,
+	0x65, 0x72, 0x73, 0x69, 0x6f, 0x6e, 0x12, 0x21, 0x0a, 0x0c, 0x63, 0x6c, 0x75, 0x73, 0x74, 0x65,
+	0x72, 0x5f, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0b, 0x63, 0x6c,
+	0x75, 0x73, 0x74, 0x65, 0x72, 0x4e, 0x61, 0x6d, 0x65, 0x42, 0x2a, 0x5a, 0x28, 0x67, 0x69, 0x74,
+	0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x67, 0x6f, 0x70, 0x61, 0x79, 0x74, 0x65, 0x63,
+	0x68, 0x2f, 0x69, 0x73, 0x74, 0x69, 0x6f, 0x2d, 0x75, 0x70, 0x67, 0x72, 0x61, 0x64, 0x65, 0x2d,
+	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
-	file_proto_upgrade_proto_rawDescOnce sync.Once
-	file_proto_upgrade_proto_rawDescData = file_proto_upgrade_proto_rawDesc
+	file_upgrade_proto_rawDescOnce sync.Once
+	file_upgrade_proto_rawDescData = file_upgrade_proto_rawDesc
 )
 
-func file_proto_upgrade_proto_rawDescGZIP() []byte {
-	file_proto_upgrade_proto_rawDescOnce.Do(func() {
-		file_proto_upgrade_proto_rawDescData = protoimpl.X.CompressGZIP(file_proto_upgrade_proto_rawDescData)
+func file_upgrade_proto_rawDescGZIP() []byte {
+	file_upgrade_proto_rawDescOnce.Do(func() {
+		file_upgrade_proto_rawDescData = protoimpl.X.CompressGZIP(file_upgrade_proto_rawDescData)
 	})
-	return file_proto_upgrade_proto_rawDescData
+	return file_upgrade_proto_rawDescData
 }
 
-var file_proto_upgrade_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
-var file_proto_upgrade_proto_goTypes = []any{
+var file_upgrade_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
+var file_upgrade_proto_goTypes = []any{
 	(*Upgrade)(nil), // 0: model.Upgrade
 }
-var file_proto_upgrade_proto_depIdxs = []int32{
+var file_upgrade_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for method output_type
 	0, // [0:0] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
@@ -112,13 +114,13 @@ var file_proto_upgrade_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_proto_upgrade_proto_init() }
-func file_proto_upgrade_proto_init() {
-	if File_proto_upgrade_proto != nil {
+func init() { file_upgrade_proto_init() }
+func file_upgrade_proto_init() {
+	if File_upgrade_proto != nil {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_proto_upgrade_proto_msgTypes[0].Exporter = func(v any, i int) any {
+		file_upgrade_proto_msgTypes[0].Exporter = func(v any, i int) any {
 			switch v := v.(*Upgrade); i {
 			case 0:
 				return &v.state
@@ -135,18 +137,18 @@ func file_proto_upgrade_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_proto_upgrade_proto_rawDesc,
+			RawDescriptor: file_upgrade_proto_rawDesc,
 			NumEnums:      0,
 			NumMessages:   1,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
-		GoTypes:           file_proto_upgrade_proto_goTypes,
-		DependencyIndexes: file_proto_upgrade_proto_depIdxs,
-		MessageInfos:      file_proto_upgrade_proto_msgTypes,
+		GoTypes:           file_upgrade_proto_goTypes,
+		DependencyIndexes: file_upgrade_proto_depIdxs,
+		MessageInfos:      file_upgrade_proto_msgTypes,
 	}.Build()
-	File_proto_upgrade_proto = out.File
-	file_proto_upgrade_proto_rawDesc = nil
-	file_proto_upgrade_proto_goTypes = nil
-	file_proto_upgrade_proto_depIdxs = nil
+	File_upgrade_proto = out.File
+	file_upgrade_proto_rawDesc = nil
+	file_upgrade_proto_goTypes = nil
+	file_upgrade_proto_depIdxs = nil
 }

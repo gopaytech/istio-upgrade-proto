@@ -1,3 +1,3 @@
 .PHONY: build.proto
 build.proto:
-	protoc --go_out . ./proto/*.proto
+	protoc --proto_path=./proto --go_out=paths=source_relative:. ./proto/*.proto
