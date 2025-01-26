@@ -8,3 +8,7 @@ build.proto:
 		--go_out=./upgrade \
 		--go_opt=module=${MODULE} \
 		./*.proto
+	protoc \
+		--proto_path=. \
+		--python_out=./upgrade \
+		./*.proto
